@@ -3,12 +3,11 @@ package ua.alevel.homeWork5;
 public class Task2 {
 
     public static void main(String[] args) {
-        System.out.println(areFibNumbers(1,3,8,7));
+        System.out.println(areFibNumbers(1,3,8,2,5,13));
     }
 
     public static boolean areFibNumbers(int...numbers){
         int answer = 0;
-        boolean finalAnswer = false;
 
         for (int i = 0; i < numbers.length; i++) {
             double temp = 5 * numbers[i] * numbers[i] - 4;
@@ -19,9 +18,6 @@ public class Task2 {
                 answer += 1;
             }
         }
-        if (answer == numbers.length){
-            finalAnswer = true;
-        }
-        return finalAnswer;
+         return answer == numbers.length;
     }
 }
